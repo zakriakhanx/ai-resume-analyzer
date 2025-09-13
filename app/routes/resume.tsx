@@ -23,36 +23,36 @@ const resume = () => {
       navigate(`/auth?next=/resume/${id}`);
   }, [isLoading]);
 
-  //   useEffect(() => {
-  //     const loadResume = async () => {
-  //         console.log('fetching...')
-  //       const resume = await kv.get(`resume:${id}`);
-  //       console.log('3')
+    useEffect(() => {
+      const loadResume = async () => {
+          console.log('fetching...')
+        const resume = await kv.get(`resume:${id}`);
+        console.log('3')
 
-  //       if (!resume) return;
+        if (!resume) return;
 
-  //       const data = JSON.parse(resume);
+        const data = JSON.parse(resume);
 
-  //       const resumeBlob = await fs.read(data.resumePath);
-  //       console.log('2')
-  //       if (!resumeBlob) return;
-  //       const pdfBlob = new Blob([resumeBlob], { type: "application/pdf" });
-  //       const resumeUrl = URL.createObjectURL(pdfBlob);
-  //       setResumeUrl(resumeUrl);
+        const resumeBlob = await fs.read(data.resumePath);
+        console.log('2')
+        if (!resumeBlob) return;
+        const pdfBlob = new Blob([resumeBlob], { type: "application/pdf" });
+        const resumeUrl = URL.createObjectURL(pdfBlob);
+        setResumeUrl(resumeUrl);
 
-  //       const imageBlob = await fs.read(data.imagePath);
-  //       console.log('1')
-  //       if (!imageBlob) return;
-  //       const imageUrl = URL.createObjectURL(imageBlob);
-  //       setImageUrl(imageUrl);
+        const imageBlob = await fs.read(data.imagePath);
+        console.log('1')
+        if (!imageBlob) return;
+        const imageUrl = URL.createObjectURL(imageBlob);
+        setImageUrl(imageUrl);
 
-  //       setFeedback(data.feedback);
+        setFeedback(data.feedback);
 
-  //       console.log(imageUrl, resumeUrl, data.feedback)
-  //     };
+        console.log(imageUrl, resumeUrl, data.feedback)
+      };
 
-  //     loadResume();
-  //   }, [id]);
+      loadResume();
+    }, [id]);
 
   return (
     <main className="!pt-0">
