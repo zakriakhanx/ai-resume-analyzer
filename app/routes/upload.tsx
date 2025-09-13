@@ -117,7 +117,10 @@ const upload = () => {
               />
             </>
           ) : (
+            <>
             <h2>Drop you resume for ATS score and improvement tips</h2>
+            <h3 className="text-gray-500">(You can skip the job details input if you want to analyze only your resume)</h3>
+            </>
           )}
 
           {!isProcessing && (
