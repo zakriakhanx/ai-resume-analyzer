@@ -23,11 +23,11 @@ const ScoreCircle = ({ score = 75 }: { score: number }) => {
           strokeWidth={stroke}
           fill="transparent"
         />
-        {/* Partial circle with gradient */}
+        {/* Partial circle with green gradient */}
         <defs>
           <linearGradient id="grad" x1="1" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#FF97AD" />
-            <stop offset="100%" stopColor="#5171FF" />
+            <stop offset="0%" stopColor="#34d399" /> {/* Emerald */}
+            <stop offset="100%" stopColor="#059669" /> {/* Teal */}
           </linearGradient>
         </defs>
         <circle
@@ -43,7 +43,7 @@ const ScoreCircle = ({ score = 75 }: { score: number }) => {
         />
       </svg>
 
-      {/* Score and issues */}
+      {/* Score */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="font-semibold text-sm">{`${score}/100`}</span>
       </div>

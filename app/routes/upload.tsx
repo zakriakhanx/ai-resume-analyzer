@@ -106,7 +106,7 @@ const upload = () => {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1>Smart feedback for you dream job</h1>
+          <h1>Let’s Make Your Resume Stand Out</h1>
           {isProcessing ? (
             <>
               <h2>{statusText}</h2>
@@ -118,8 +118,8 @@ const upload = () => {
             </>
           ) : (
             <>
-            <h2>Drop you resume for ATS score and improvement tips</h2>
-            <h3 className="text-gray-500">(You can skip the job details input if you want to analyze only your resume)</h3>
+            <h2>Drop your resume for instant ATS scoring and actionable feedback.</h2>
+            <h3 className="text-gray-500">(Job details are optional — skip them if you just want a resume analysis.)</h3>
             </>
           )}
 

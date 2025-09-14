@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Resumind" },
+    { title: "ResuMatch" },
     { name: "description", content: "Smart feedback for you dream job!" },
   ];
 }
@@ -45,12 +45,12 @@ export default function Home() {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1>Track Your Applications & Resume Ratings</h1>
+          <h1>Smarter Resumes, Better Opportunities</h1>
 
           {!loadingResumes && resumes?.length === 0 ? (
-            <h2>No resumes found, upload your first resume to get feedback.</h2>
+            <h2>Your job search starts here. Upload your resume to see how you can stand out.</h2>
           ) : (
-            <h2>Review your submissions and check AI-powered feedback.</h2>
+            <h2>Get instant AI feedback on your applications and improve your chances.</h2>
           )}
         </div>
 
