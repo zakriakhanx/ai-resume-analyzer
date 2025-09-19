@@ -2,8 +2,6 @@
 
 ResuMatch is a smart, AI-powered application designed to help job seekers optimize their resumes. It provides detailed feedback, an Applicant Tracking System (ATS) score, and actionable suggestions to improve the chances of landing a dream job. The application is built on the [Puter.com](https://puter.com) platform, leveraging its AI, authentication, and storage capabilities.
 
-![Resume Scan](/public/images/resume-scan-2.gif)
-
 ## Features
 
 -   **AI-Powered Feedback:** Get instant, detailed feedback on your resume.
