@@ -19,10 +19,6 @@ export default function Home() {
   const [loadingResumes, setLoadingResumes] = useState(false);
 
   useEffect(() => {
-    if (!auth.isAuthenticated) navigate("/auth?next=/");
-  }, [auth.isAuthenticated]);
-
-  useEffect(() => {
     const loadResumes = async () => {
       setLoadingResumes(true);
 
@@ -36,8 +32,11 @@ export default function Home() {
       setLoadingResumes(false);
     };
 
-    loadResumes();
-  }, []);
+    if (auth.isAuthenticated) {
+      loadResumes();
+    }
+
+  }, [auth.isAuthenticated]);
 
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
@@ -48,9 +47,15 @@ export default function Home() {
           <h1>Smarter Resumes, Better Opportunities</h1>
 
           {!loadingResumes && resumes?.length === 0 ? (
-            <h2>Your job search starts here. Upload your resume to see how you can stand out.</h2>
+            <h2>
+              Your job search starts here. Upload your resume to see how you can
+              stand out.
+            </h2>
           ) : (
-            <h2>Get instant AI feedback on your applications and improve your chances.</h2>
+            <h2>
+              Get instant AI feedback on your applications and improve your
+              chances.
+            </h2>
           )}
         </div>
 

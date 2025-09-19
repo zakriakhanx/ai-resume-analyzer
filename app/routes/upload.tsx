@@ -1,5 +1,5 @@
 import { prepareInstructions } from "constants/index";
-import React, { useState, type FormEvent } from "react";
+import React, { useEffect, useState, type FormEvent } from "react";
 import { useNavigate } from "react-router";
 import FileUploader from "~/components/FileUploader";
 import Navbar from "~/components/Navbar";
@@ -13,6 +13,10 @@ const upload = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusText, setStatusText] = useState("");
   const [file, setFile] = useState<File | null>(null);
+
+  useEffect(() => {
+      if (!auth.isAuthenticated) navigate("/auth?next=/upload");
+    }, [auth.isAuthenticated]);
 
   const handleFileSelect = (file: File | null) => {
     setFile(file);
