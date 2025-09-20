@@ -44,7 +44,7 @@ export default function Home() {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1>Smarter Resumes, Better Opportunities</h1>
+          <h1 className="">Smarter Resumes, Better Opportunities</h1>
 
           {!loadingResumes && resumes?.length === 0 ? (
             <h2>
